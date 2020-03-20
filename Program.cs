@@ -125,6 +125,9 @@ namespace MSBTEditorCli
 
         static void RepackMSBT(string path, string output)
         {
+            System.IO.FileInfo file = new System.IO.FileInfo(output);
+            file.Directory.Create(); // If the directory already exists, this method does nothing.
+
             MSBT _msbt = new MSBT();
 
             string jsonText = System.IO.File.ReadAllText(path);

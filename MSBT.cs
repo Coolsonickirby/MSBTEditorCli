@@ -561,6 +561,8 @@ namespace MsbtEditor
 
             try
             {
+                
+
                 FileStream fs = System.IO.File.Create(File.FullName);
                 BinaryWriterX bw = new BinaryWriterX(fs);
 
