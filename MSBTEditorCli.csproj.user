@@ -1,6 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
-    <StartArguments>D:\1test.msbt D:\2test.json</StartArguments>
+    <StartArguments>D:\Projects\PHP\Laravel\MSBTEditor\public/storage/ogMSBT/2/msg_bgmus_en.msbt D:\Projects\PHP\Laravel\MSBTEditor\public/storage/jsonMSBT/20/20.json</StartArguments>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <StartArguments>
+    </StartArguments>
   </PropertyGroup>
 </Project>

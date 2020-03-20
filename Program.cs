@@ -45,6 +45,9 @@ namespace MSBTEditorCli
 
         static void ExtractMSBT(string path, string output)
         {
+            System.IO.FileInfo file = new System.IO.FileInfo(output);
+            file.Directory.Create(); // If the directory already exists, this method does nothing.
+
             MSBT _msbt = new MSBT(path);
 
             MSBTList lstStrings = new MSBTList();
@@ -127,7 +130,6 @@ namespace MSBTEditorCli
         {
             System.IO.FileInfo file = new System.IO.FileInfo(output);
             file.Directory.Create(); // If the directory already exists, this method does nothing.
-
             MSBT _msbt = new MSBT();
 
             string jsonText = System.IO.File.ReadAllText(path);
